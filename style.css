@@ -3,6 +3,7 @@
    --neon-green: hsl(150, 100%, 66%);
    --grayish-blue: hsl(217, 19%, 38%);
    --dark-grayish-blue: hsl(217, 19%, 38%);
+   --background: hsl(218, 21%, 24%);
    --dark-blue: hsl(218, 23%, 16%);
    --font: 'Manrope', sans-serif;
    --bolder: 800;
@@ -12,4 +13,55 @@
    padding: 0;
    box-sizing: border-box;
    font-family: var(--font);
+   transition: all .15s ease-in-out;
+}
+body{
+   background: var(--dark-blue);
+}
+main > section{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   background: var(--background);
+   border-radius: .5em;
+   padding: 2em 1em;
+   width: 90%;
+   max-width: 500px;
+}
+main > section > h1{
+   font-size: .9rem;
+   color: var(--neon-green);
+   letter-spacing: .2em;
+   margin-bottom: 1.5em;
+}
+main > section > p{
+   color: var(--light-cyan);
+   font-weight: var(--bolder);
+   font-size: 1.5rem;
+   margin-bottom: .7em;
+}
+main > section > div:last-child{
+   background: var(--neon-green);
+   width: 20%;
+   margin: auto;
+   margin-top: -2em;
+   border-radius: 50%;
+   position: relative;
+   top: 4em;
+}
+main > section > div:last-child:hover{
+   box-shadow: -2px 0px 38px 0px var(--neon-green);
+   -moz-box-shadow: -2px 0px 38px 0px var(--neon-green);
+   -webkit-box-shadow: -2px 0px 38px 0px var(--neon-green);
+}
+main > section > div:last-child img{
+   padding: 1em;
+   text-align: center;
+}
+@media all and (min-width: 700px){
+main>section>div:last-child {
+   width: 13%;
+}
 }
